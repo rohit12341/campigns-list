@@ -19,6 +19,7 @@ export default function Modal({ isOpen, handleModal, data}) {
   }, [el]);
 
   const backDrop = (e) => {
+    // hide popup when click outside to the modal
       if(e.target.id === 'modal'){
           handleModal(false);
       }

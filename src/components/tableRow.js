@@ -9,6 +9,7 @@ const TableRow = ({item, handleModal, moveEvent}) => {
   const ref = React.createRef();
 
   const handleDateChange = (e, id) => {
+   // date input handler for moving event to the relevant tab after changing date
     setDate(e.target.value);
     moveEvent(e.target.value, id);
     setCal(false); 

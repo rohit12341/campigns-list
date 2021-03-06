@@ -18,25 +18,29 @@ class App extends React.Component {
   }
 
   handleModal = (status, item) => {
+    // open pricing modal and set event data from modal
     this.setState({isShow:status, modalData:item});
   }
 
   changeTab = (i) => {
+    // setting active tab index
     this.setState({activeTab:i});
   }
 
-  Filter = (data, tab) => {
-    return data.filter(item=>Number(item.type) === tab);
-  }
-
  componentDidMount(){
+
+  // set data according to date in tabs when first load 
+
    let e = [
    {type:'Upcoming Campaigns', data:[]},
    {type:'Live Campaigns', data:[]},
    {type:'Past Campaigns', data:[]}];
 
    data.forEach((item, i)=>{
+     // getting date status in status such as - past, future, current
      let status = DateStatus(item.createdOn);
+
+     // puttting event in based on date status 
      if(status == 'future'){
        e[0].data.push(item);
      } else if(status == 'current'){
@@ -50,6 +54,10 @@ class App extends React.Component {
  }
 
  moveEvent = (val, id) => {
+
+  // first find and remove event from current tab
+  // move event in relevant data after updating date
+
    let oldEvents = this.state.events;
    let events = oldEvents.filter((item, idx) => idx == this.state.activeTab)[0];
    let eventData = events ? events.data : [];
@@ -124,6 +132,8 @@ render(){
           <p key={i} className="msg">No Campaigns found</p>)
           ))}
       </div>
+
+      {/* modal form see pricing */}
       {isShow && <Modal handleModal={this.handleModal} isOpen={isShow} data={modalData} />}
   </div>
   </>

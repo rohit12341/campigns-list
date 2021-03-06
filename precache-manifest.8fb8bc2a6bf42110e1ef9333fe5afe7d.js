@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "895930305f30ae51b873bb5c7cbb860d",
+    "revision": "d9df1897b9c3e8b16ecbaacabc34d9d7",
     "url": "/campigns-list/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/campigns-list/static/js/2.a8be6f97.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3593733cb8a1b2a91793",
-    "url": "/campigns-list/static/js/main.c29e8785.chunk.js"
+    "revision": "09fffc417fb29c410260",
+    "url": "/campigns-list/static/js/main.bb7ca5a5.chunk.js"
   },
   {
     "revision": "ac2b2648beba744b2e83",

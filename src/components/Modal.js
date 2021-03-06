@@ -30,7 +30,7 @@ export default function Modal({ isOpen, handleModal, data}) {
       <div className="modal" id="modal" onClick={backDrop}>
        <div className="modal-content">
            <div className="head">
-               <img src="/assets/img/Bitmap.png" alt="game img"/>
+               <img src={`${process.env.PUBLIC_URL}/assets/img/Bitmap.png`} alt="game img"/>
                <div>
                    <p>{data.name}</p>
                    <span>{data.region}</span>

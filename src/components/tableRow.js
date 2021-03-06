@@ -47,28 +47,28 @@ const TableRow = ({item, handleModal, moveEvent}) => {
         </td>
         <td>
             <div className="camp">
-              <div className="img"><img src="/assets/img/Bitmap.png" alt="camp"/> </div>
+              <div className="img"><img src={`${process.env.PUBLIC_URL}/assets/img/Bitmap.png`} alt="camp"/> </div>
               <div><p>{item.name}</p><span>{item.region}</span></div>
           </div>
           </td>
         <td>
           <div className="view">
-            <img src="/assets/img/Price.png" alt="pricing"/>
+            <img src={`${process.env.PUBLIC_URL}/assets/img/Price.png`} alt="pricing"/>
             <span onClick={()=>handleModal(true, item)}>View Pricing</span>
           </div>
         </td>
         <td>
         <div className="action">
           <div className="item file">
-            <img src="/assets/img/file.png" alt="pricing"/>
+            <img src={`${process.env.PUBLIC_URL}/assets/img/file.png`} alt="pricing"/>
             <span>CSV</span>
             </div>
             <div className="item">
-            <img src="/assets/img/statistics-report.png" alt="pricing"/>
+            <img src={`${process.env.PUBLIC_URL}/assets/img/statistics-report.png`} alt="pricing"/>
             <span>Report</span>
             </div>
             <div ref={ref} onClick={OpenDataFiled} className="item date">
-            <img src="/assets/img/calendar.png" alt="pricing"/>
+            <img src={`${process.env.PUBLIC_URL}/assets/img/calendar.png`} alt="pricing"/>
             <span>Schedule Again</span>
             {openCal && <input type="date" value={date} onChange={(e)=>handleDateChange(e, item.id)} /> }
             </div>

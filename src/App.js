@@ -78,12 +78,11 @@ class App extends React.Component {
 render(){
 
   const {activeTab, isShow, modalData, events} = this.state;
-
   return (
     <>
     <header className="header">
     <div className="container logo">
-      <img src="/assets/img/logo.png" alt="bluestack logo" />
+      <img src={`${process.env.PUBLIC_URL}/assets/img/logo.png`} alt="bluestack logo" />
 
       <div id="google_translate_element"></div>
     </div>
